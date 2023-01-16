@@ -1,0 +1,15 @@
+n,m = map(int, input().split())
+
+# a에 b를 저장하고, b에 a를 저장하는 리스트    
+friend = [[] for _ in range(n)]
+    
+for i in range(m):
+    a, b = map(int, input().split())
+    # 0번째 인덱싱
+    a -= 1
+    b -= 1
+    friend[a].append(b)
+    friend[b].append(a)
+    
+for i in range(n):
+    print(len(friend[i]))
