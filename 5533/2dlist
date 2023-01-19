@@ -17,3 +17,8 @@ for y in range(n):
     ans.append(score)
  
 print('\n'.join(map(str,ans)))
+
+
+'''r[x]로 행마다 열값들을 확인해서 중복 check
+    안쪽 반복문(행연산/플레이어들의 점수계산) 끝나면
+    점수 저장'''
