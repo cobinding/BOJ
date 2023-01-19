@@ -1,0 +1,19 @@
+n = int(input())
+r = [[],[],[]]
+ans = []
+for _ in range(n):
+    f,s,t = map(int, input().split())
+    r[0].append(f)
+    r[1].append(s)
+    r[2].append(t)
+
+# 이중 리스트 동작 구조
+for y in range(n):
+    score = 0
+    for x in range(3):
+        if r[x].count(r[x][y]) == 1:
+            score += r[x][y]
+    print(score)
+    ans.append(score)
+ 
+print('\n'.join(map(str,ans)))
